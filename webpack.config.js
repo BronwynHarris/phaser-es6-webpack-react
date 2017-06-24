@@ -41,6 +41,18 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test : /\.css$/,
+        include: [path.join(__dirname, 'src', 'gui-system')],
+        use : ['style-loader', {
+          loader : 'css-loader',
+          options : {
+            modules : true,
+            importLoaders : 1,
+            localIdentName : '[path][name]__[local]--[hash:base64:5]',
+          },
+        }],
+      },
       { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'src') },
       { test: /pixi\.js/, use: ['expose-loader?PIXI'] },
       { test: /phaser-split\.js$/, use: ['expose-loader?Phaser'] },

@@ -5,18 +5,12 @@ import { Provider } from 'react-redux';
 
 import store from './store'
 
-import Routes from './Routes';
-
-import {
-    HashRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom'
+import Gui from './Gui';
 
 
 render(
     <Provider store={store}>
-        <Routes />
+        <Gui />
     </Provider>,
     document.getElementById('gui')
 )
