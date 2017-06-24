@@ -2,8 +2,7 @@ import 'pixi'
 import 'p2'
 import Phaser from 'phaser'
 
-import React from 'react'
-import {render} from 'react-dom';
+import './gui-system'
 
 import BootState from './states/Boot'
 import SplashState from './states/Splash'
@@ -28,13 +27,3 @@ class Game extends Phaser.Game {
 }
 
 window.game = new Game()
-
-render(
-    <MyGui />,
-    document.getElementById('gui')
-)
-
-
-function MyGui() {
-    return (<div>React Is Ready</div>)
-}
