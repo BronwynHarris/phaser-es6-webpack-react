@@ -34,6 +34,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "css-loader": "^0.28.4",
+    "history": "^4.6.3",
     "immutable": "^3.8.1",
     "phaser-ce": "^2.8.0",
     "react": "^15.6.1",
@@ -41,7 +42,7 @@
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "react-router-redux": "^4.0.8",
+    "react-router-redux": "^5.0.0-alpha.6",
     "redux": "^3.7.0",
     "redux-thunk": "^2.2.0",
     "style-loader": "^0.18.2",

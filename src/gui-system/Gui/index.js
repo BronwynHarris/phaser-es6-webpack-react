@@ -1,10 +1,8 @@
 import React from 'react'
-import {
-    HashRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom'
 
+import { Route } from 'react-router'
+import { ConnectedRouter } from 'react-router-redux'
+import { history } from '../store'
 
 import MainScreen from '../screens/Main'
 import * as styles from './Gui.css'
@@ -12,10 +10,10 @@ import * as styles from './Gui.css'
 export default () => {
 
     return (
-        <Router>
+        <ConnectedRouter history={history}>
             <div className={styles.guiContainer}>
                 <Route exact={true} path="/" component={MainScreen}/>
             </div>
-        </Router>
+        </ConnectedRouter>
     )
 }
