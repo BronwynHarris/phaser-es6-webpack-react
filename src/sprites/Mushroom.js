@@ -1,9 +1,9 @@
 import Phaser from 'phaser'
 
-import { guiAction } from '../gui-system'
+import { show } from '../gui-system/screens/SimpleMessage'
 export default class extends Phaser.Sprite {
   onClick() {
-    guiAction('BUTTON_CLICKED', {name: 'stuff', orig: this})
+    show('Hello boys and girls')
   }
   constructor ({ game, x, y, asset }) {
     super(game, x, y, asset)

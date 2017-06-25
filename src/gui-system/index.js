@@ -7,10 +7,6 @@ import store from './store'
 
 import Gui from './Gui';
 
-import * as bridge from './bridge'
-
-
-
 export function connect(game) {
 
     console.log('Connected to : ', game)
@@ -20,10 +16,4 @@ export function connect(game) {
         </Provider>,
         document.getElementById('gui')
     );
-
-    bridge.listenForGuiGameEvents(game)
-}
-
-export function guiAction(type, payload) {
-    bridge.guiAction(type, payload)
 }
