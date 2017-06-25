@@ -46,13 +46,15 @@ Here i isolate the code responsible for showing the message :
 
 ```javascript
 ...
-import { show } from '../gui-system/SimpleMessage'
+    import { show } from '../gui-system/SimpleMessage'
 ...
 
     show('Hello boys and girls', () => {
       console.log('Message is closed')
     })
 ```
+
+Notice that no DOM manipulation was done from the game code, we want to keep the possibility to replace the whole gui system if needed in the future.
 
 
 # Setup
