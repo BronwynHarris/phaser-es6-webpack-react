@@ -1,17 +1,58 @@
-# Phaser + ES6 + Webpack.
-#### A bootstrap project to create games with Phaser + ES6 + Webpack.
+# Phaser + ES6 + Webpack + React
+#### A bootstrap project to create games with Phaser + ES6 + Webpack + React / Redux for UI
 
-![Phaser+ES6+Webpack](https://raw.githubusercontent.com/lean/phaser-es6-webpack/master/assets/images/phaser-es6-webpack.jpg)
+The starting point of this project was forked from  [this repository](https://github.com/lean/phaser-es6-webpack.git)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
+In this project i will attempt to create a gui system using React, the main goal is to make it the less intrusive on game code as posible.
 
 ## Features
-- ESLINT with JavaScript Standard Style configuration
-- Next generation of Javascript
-- Webpack ready
-- Multiple browser testing
-- WebFont Loader
+All features from the original repo + :
+
+- possibility to show a simple message from your game.
+- React + Redux + React Router 4 integration.
+
+
+### Example for showing a message : 
+On this example a message is shown when you click on the rotating mushroom : 
+
+```javascript
+import Phaser from 'phaser'
+
+import { show } from '../gui-system/SimpleMessage'
+
+export default class extends Phaser.Sprite {
+  onClick() {
+    show('Hello boys and girls', () => {
+      console.log('Message is closed')
+    })
+  }
+  constructor ({ game, x, y, asset }) {
+    super(game, x, y, asset)
+    this.anchor.setTo(0.5)
+
+    this.inputEnabled = true;
+
+    this.events.onInputDown.add(this.onClick, this);
+  }
+
+  update () {
+    this.angle += 1
+  }
+}
+
+```
+
+Here i isolate the code responsible for showing the message : 
+
+```javascript
+...
+import { show } from '../gui-system/SimpleMessage'
+...
+
+    show('Hello boys and girls', () => {
+      console.log('Message is closed')
+    })
+```
 
 
 # Setup
@@ -23,7 +64,7 @@ Navigate into your workspace directory.
 
 Run:
 
-```git clone https://github.com/lean/phaser-es6-webpack.git```
+```git clone https://github.com/bmarwane/phaser-es6-webpack-react``
 
 ## 2. Install node.js and npm:
 
