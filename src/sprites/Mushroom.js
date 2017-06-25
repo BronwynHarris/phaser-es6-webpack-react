@@ -3,7 +3,9 @@ import Phaser from 'phaser'
 import { show } from '../gui-system/screens/SimpleMessage'
 export default class extends Phaser.Sprite {
   onClick() {
-    show('Hello boys and girls')
+    show('Hello boys and girls', () => {
+      console.log('Message is closed')
+    })
   }
   constructor ({ game, x, y, asset }) {
     super(game, x, y, asset)

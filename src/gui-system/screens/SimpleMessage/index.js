@@ -10,9 +10,9 @@ import store from '../../store'
 import * as actionCreators from './behaviors'
 import SimpleMessage from './SimpleMessage'
 
-export function show(message) {
+export function show(message, onClose) {
     store.dispatch(push('/simple-message'))
-    store.dispatch(actionCreators.showMessage(message))
+    store.dispatch(actionCreators.showMessage(message, onClose))
 }
 
 function mapStateToProps(state) {
