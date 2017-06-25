@@ -4,16 +4,24 @@ import {render} from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from './store'
-import { saveGameConfiguration } from './Gui/behaviors'
+import { saveGameConfiguration } from './Main/behaviors'
 
-import Gui from './Gui';
+import Main from './Main';
 
-export function connect(width, height) {
+export function connect(parentId, width, height) {
+
+    const parentElem = document.getElementById(parentId)
+    parentElem.style.width=width + 'px'
+    parentElem.style.height=height + 'px'
+
+    const guiContainer = document.createElement('div')
+    parentElem.appendChild(guiContainer)
+
     render(
         <Provider store={store}>
-            <Gui />
+            <Main />
         </Provider>,
-        document.getElementById('gui')
+        guiContainer
     );
 
     store.dispatch(saveGameConfiguration(width, height))

@@ -9,7 +9,7 @@ export default function SimpleMessageCmp({ message, gameWidth, gameHeight, close
     }
 
     const innerBlock = {
-        width: (gameWidth * 0.95) - paddingAndBordersExtraSpace + 'px',
+        width: (gameWidth * 1) - paddingAndBordersExtraSpace + 'px',
 
     }
 

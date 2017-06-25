@@ -5,7 +5,7 @@ import createHistory from 'history/createMemoryHistory'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 
-import mainReducer from './Gui/behaviors'
+import mainReducer from './Main/behaviors'
 import simpleMessageReducer from './screens/SimpleMessage/behaviors'
 
 export const history = createHistory()

@@ -19,9 +19,6 @@ class Game extends Phaser.Game {
         const height = docElement.clientHeight > config.gameHeight ? config.gameHeight : docElement.clientHeight
 
         super(width, height, Phaser.CANVAS, parentId, null)
-        const parentElem = document.getElementById(parentId)
-        parentElem.style.width=width + 'px'
-        parentElem.style.height=height + 'px'
 
         this.state.add('Boot', BootState, false)
         this.state.add('Splash', SplashState, false)
@@ -29,7 +26,7 @@ class Game extends Phaser.Game {
 
         this.state.start('Boot')
 
-        connect(width, height)
+        connect(parentId, width, height)
     }
 }
 
