@@ -6,7 +6,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 
 import mainReducer from './Main/behaviors'
-import simpleMessageReducer from './screens/SimpleMessage/behaviors'
+import simpleMessageReducer from './systems/SimpleMessage/behaviors'
 
 export const history = createHistory()
 const routingMiddleware = routerMiddleware(history)

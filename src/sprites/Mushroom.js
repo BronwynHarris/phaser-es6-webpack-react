@@ -1,6 +1,7 @@
 import Phaser from 'phaser'
 
-import { show } from '../gui-system/screens/SimpleMessage'
+import { show } from '../gui-system/systems/SimpleMessage'
+
 export default class extends Phaser.Sprite {
   onClick() {
     show('Hello boys and girls', () => {
