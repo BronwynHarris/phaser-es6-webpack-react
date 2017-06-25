@@ -18,8 +18,8 @@ export function show(message) {
 function mapStateToProps(state) {
     return {
         message: state.simpleMessage.get('message'),
-        gameWidth: state.mainScreen.getIn(['gameConfig', 'width']),
-        gameHeight: state.mainScreen.getIn(['gameConfig', 'height']),
+        gameWidth: state.main.getIn(['gameConfig', 'width']),
+        gameHeight: state.main.getIn(['gameConfig', 'height']),
     }
 }
 

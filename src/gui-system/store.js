@@ -1,11 +1,11 @@
 import thunkMiddleware from 'redux-thunk'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 
-import createHistory from 'history/createHashHistory'
+import createHistory from 'history/createMemoryHistory'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 
-import mainScreenReducer from './screens/Main/behaviors'
+import mainReducer from './Gui/behaviors'
 import simpleMessageReducer from './screens/SimpleMessage/behaviors'
 
 export const history = createHistory()
@@ -14,7 +14,7 @@ const routingMiddleware = routerMiddleware(history)
 
 const reducers = {
     router: routerReducer,
-    mainScreen: mainScreenReducer,
+    main: mainReducer,
     simpleMessage: simpleMessageReducer,
 }
 

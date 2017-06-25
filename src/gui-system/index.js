@@ -4,7 +4,7 @@ import {render} from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from './store'
-import { saveGameConfiguration } from './screens/Main/behaviors'
+import { saveGameConfiguration } from './Gui/behaviors'
 
 import Gui from './Gui';
 
