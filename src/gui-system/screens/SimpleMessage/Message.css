@@ -4,10 +4,13 @@
     font-family: "Anonymice Powerline";
     border: 2px solid gray;
     border-radius: 4px;
+
+
 }
 
 .messageBody {
-
+    overflow-y: auto;
+    margin-bottom: 5px;
 }
 
 .messageFooter button {
@@ -17,5 +20,4 @@
 
 .clear {
     clear: both;
-
 }

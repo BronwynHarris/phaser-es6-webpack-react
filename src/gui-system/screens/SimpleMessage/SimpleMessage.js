@@ -5,12 +5,16 @@ export default function SimpleMessageCmp({ message, gameWidth, gameHeight }) {
     var paddingAndBordersExtraSpace = 23;
     const dimensions = {
         width: gameWidth - paddingAndBordersExtraSpace + 'px',
+
+    }
+
+    const bodyDimension = {
+        'max-height': (gameHeight / 4) + 'px',
     }
     return (
         <div className={styles.message} style={dimensions}>
-            <div className={styles.messageBody}>
+            <div className={styles.messageBody} style={bodyDimension}>
                 { message }
-                Hi My friend my name is jeff ....
             </div>
             <div className={styles.messageFooter}>
                 <button>
