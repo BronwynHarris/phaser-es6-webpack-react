@@ -1,27 +1,37 @@
 import React from 'react';
 import styles from './Message.css'
 
-export default function SimpleMessageCmp({ message, gameWidth, gameHeight }) {
+export default function SimpleMessageCmp({ message, gameWidth, gameHeight, close }) {
     var paddingAndBordersExtraSpace = 23;
-    const dimensions = {
-        width: gameWidth - paddingAndBordersExtraSpace + 'px',
+    const outerBlock = {
+        width: gameWidth + 'px',
+
+    }
+
+    const innerBlock = {
+        width: (gameWidth * 0.95) - paddingAndBordersExtraSpace + 'px',
 
     }
 
     const bodyDimension = {
-        'max-height': (gameHeight / 4) + 'px',
+        maxHeight: (gameHeight / 4) + 'px',
     }
     return (
-        <div className={styles.message} style={dimensions}>
-            <div className={styles.messageBody} style={bodyDimension}>
-                { message }
+        <div style={outerBlock}>
+            <div className={styles.message} style={innerBlock}>
+                <div className={styles.messageBody} style={bodyDimension}>
+                    { message }
+                </div>
+                <div className={styles.messageFooter}>
+                    <button onClick={(e) => {
+                        close()
+                    }}>
+                        Close
+                    </button>
+                    <div className={styles.clear}></div>
+                </div>
             </div>
-            <div className={styles.messageFooter}>
-                <button>
-                     Next
-                </button>
-                <div className={styles.clear}></div>
-            </div>
+
         </div>
     )
 }
