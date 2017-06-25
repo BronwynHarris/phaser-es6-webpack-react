@@ -1,0 +1,21 @@
+.message {
+    background: white;
+    padding: 10px;
+    font-family: "Anonymice Powerline";
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+.messageBody {
+
+}
+
+.messageFooter button {
+    float: right;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+
+}

@@ -7,7 +7,6 @@ export function showMessage(message) {
 }
 
 export default function reducer(state = Map(), action){
-    console.log('action', action)
     switch(action.type) {
         case SHOW_MESSAGE:
             return state.merge({

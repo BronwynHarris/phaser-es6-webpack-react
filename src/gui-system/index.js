@@ -4,16 +4,17 @@ import {render} from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from './store'
+import { saveGameConfiguration } from './screens/Main/behaviors'
 
 import Gui from './Gui';
 
-export function connect(game) {
-
-    console.log('Connected to : ', game)
+export function connect(width, height) {
     render(
         <Provider store={store}>
             <Gui />
         </Provider>,
         document.getElementById('gui')
     );
+
+    store.dispatch(saveGameConfiguration(width, height))
 }
