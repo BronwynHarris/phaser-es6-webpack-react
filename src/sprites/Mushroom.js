@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
 
-import { show } from '../gui-system/systems/SimpleMessage'
+import { show } from '../gui-system/SimpleMessage'
 
 export default class extends Phaser.Sprite {
   onClick() {

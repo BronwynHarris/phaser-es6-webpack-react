@@ -4,7 +4,7 @@ import { Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 import { history } from '../store'
 
-import SimpleMessage from '../systems/SimpleMessage'
+import SimpleMessage from '../SimpleMessage'
 import * as styles from './Gui.css'
 
 export default () => {

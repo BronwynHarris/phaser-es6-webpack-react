@@ -4,8 +4,7 @@ import { push } from 'react-router-redux'
 import {connect} from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
-import store from '../../store'
-
+import store from '../store'
 
 import * as actionCreators from './behaviors'
 import SimpleMessage from './SimpleMessage'
